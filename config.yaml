@@ -1,0 +1,61 @@
+version: 1.0.0
+#服务器类
+port: :8081
+
+readTimeout: 90000
+writeTimeout: 95000
+idleTimeout: 30
+maxHeaderBytes: 1024  # 1 << 20
+
+#系统配置类
+workerSize: 2000
+taskQueue: 2000
+
+hashKey: dsp
+
+
+#第三方组件类
+# MySQL 数据库配置
+redis:
+#  addr: 127.0.0.1:6379
+  addr: 115.190.91.254:6379
+  username: root
+  password:
+  db:
+
+redisKey: dsp
+
+
+database:
+  host: 115.191.52.226
+  port: 3306
+  username: root
+  password: root123456
+  dbname: dsp-admin
+  max_idle_conns: 10
+  max_open_conns: 100
+
+
+kafka:
+  brokers:
+   - 117.72.67.186:9092
+  frequency: 500
+  messages: 1000
+  returnSuccess: false
+  groupId: dsp-consumer
+  topics:
+    - req
+    - res
+    - ims
+    - clk
+    - ins
+    - down
+    - act
+
+
+
+
+
+
+
+
