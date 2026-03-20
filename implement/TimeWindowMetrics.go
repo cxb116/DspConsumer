@@ -183,7 +183,8 @@ func buildDiscardField(metricType, side string, dspSlotId int64, dspSlotCode str
 // 例如: 202602252050 (20:50) → 202602252100 (21:00)
 //       202602252005 (20:05) → 202602252010 (20:10)
 func alignToNext10Minutes(eventTs string) string {
-	return time.Now().Add(10 * time.Minute).Truncate(10 * time.Minute).Format("200601021504")
+	//return time.Now().Add(10 * time.Minute).Truncate(10 * time.Minute).Format("200601021504")
+	return eventTs
 }
 
 // buildRedisKey 构建Redis key
