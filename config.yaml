@@ -27,10 +27,10 @@ redisKey: dsp
 
 
 database:
-  host: 115.191.52.226
+  host: 117.72.67.186
   port: 3306
   username: root
-  password: root123456
+  password: Chen@666
   dbname: dsp-admin
   max_idle_conns: 10
   max_open_conns: 100
